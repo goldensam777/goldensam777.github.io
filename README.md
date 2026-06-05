@@ -1,19 +1,25 @@
 <div align="center">
 
-  <!-- EFFET MACHINE À ÉCRIRE -->
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&width=600&lines=Construire%2C+chercher%2C+formaliser...;Python+%7C+Quantum+Physics+%7C+AI;Chercheur+Multidisciplinaire;Math%C3%A9matiques+Fondamentales" alt="Typing Effect" />
+  <!-- 1. LA BANNIÈRE (Style Omotola) -->
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=200&section=header&text=Samuel%20YEVI&fontSize=55&fontColor=58A6FF&desc=Math%C3%A9maticien%20Universaliste%20%7C%20Chercheur%20Ind%C3%A9pendant&descSize=22&descAlignY=75" width="100%" alt="Bannière Samuel YEVI" />
 
   <br/><br/>
 
-  <!-- LES BADGES DE COULEURS NETTOYÉS -->
+  <!-- 2. EFFET MACHINE À ÉCRIRE (Avec Optima, immo absoluta perfectio) -->
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&width=600&lines=Optima%2C+immo+absoluta+perfectio.;Construire%2C+chercher%2C+formaliser...;Python+%7C+Quantum+Physics+%7C+AI;Chercheur+Multidisciplinaire;Math%C3%A9matiques+Fondamentales" alt="Typing Effect" />
+
+  <br/><br/>
+
+  <!-- 3. LES BADGES DOUBLE-TEXTE (Titre à gauche, Valeur à droite) -->
   <a href="https://www.linkedin.com/in/samuel-yevi-b42071388/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&labelColor=0D1117&color=58A6FF" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LINKEDIN-SAMUEL%20YEVI-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=2D333B" alt="LinkedIn" />
   </a>
   <a href="mailto:leumasnedlogdev777@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge" alt="Email" />
+    <img src="https://img.shields.io/badge/EMAIL-LEUMASNEDLOGDEV777@GMAIL.COM-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=2D333B" alt="Email" />
   </a>
-  <img src="https://img.shields.io/badge/Commits_Annuel-238636?style=for-the-badge" alt="Commits" />
-  <img src="https://img.shields.io/badge/Statut-Focus-58A6FF?style=for-the-badge" alt="Statut" />
+  <br/>
+  <img src="https://img.shields.io/badge/COMMITS%20ANNUELS-800%2B-238636?style=for-the-badge&logo=github&logoColor=white&labelColor=2D333B" alt="Commits" />
+  <img src="https://img.shields.io/badge/STATUT-FOCUS-58A6FF?style=for-the-badge&labelColor=2D333B" alt="Statut" />
 
 </div>
 
