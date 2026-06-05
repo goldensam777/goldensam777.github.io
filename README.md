@@ -1,8 +1,7 @@
 <div align="center">
 
   <!-- 1. LA BANNIÈRE (Style Omotola) -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=200&section=header&text=Samuel%20YEVI&fontSize=55&fontColor=58A6FF&desc=Math%C3%A9maticien%20Universaliste%20%7C%20Chercheur%20Ind%C3%A9pendant&descSize=22&descAlignY=75" width="100%" alt="Bannière Samuel YEVI" />
-
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=040d21,0b1930,000000&height=200&section=header&text=Samuel%20YEVI&fontSize=55&fontColor=ffffff&desc=Math%C3%A9maticien%20Universaliste%20%7C%20Chercheur%20Ind%C3%A9pendant&descSize=22&descAlignY=75" width="100%" alt="Bannière Samuel YEVI" />
   <br/><br/>
 
   <!-- 2. EFFET MACHINE À ÉCRIRE (Avec Optima, immo absoluta perfectio) -->
