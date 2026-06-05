@@ -1,18 +1,18 @@
 <div align="center">
 
-  <!-- EFFET MACHINE À ÉCRIRE (URLs encodées proprement) -->
+  <!-- EFFET MACHINE À ÉCRIRE -->
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&width=600&lines=Construire%2C+chercher%2C+formaliser...;Python+%7C+Quantum+Physics+%7C+AI;Chercheur+Multidisciplinaire;Math%C3%A9matiques+Fondamentales" alt="Typing Effect" />
 
   <br/><br/>
 
-  <!-- LES BADGES DE COULEURS -->
+  <!-- LES BADGES SÉCURISÉS (SANS LOGO INTERNE POUR ÉVITER LE BLOCAGE) -->
   <a href="https://linkedin.com/in/samuel-yevi-b42071388" target="_blank">
-    <img src="https://img.shields.io/badge/LINKEDIN-0D1117?style=for-the-badge&logo=linkedin&logoColor=58A6FF" alt="LinkedIn" />
-  </a>&nbsp;
+    <img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&labelColor=0D1117&color=58A6FF" alt="LinkedIn" />
+  </a>
   <a href="mailto:samuelyevidev777@gmail.com">
-    <img src="https://img.shields.io/badge/EMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>&nbsp;
-  <img src="https://img.shields.io/badge/COMMITS%20%2F%20AN-238636?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="Commits" />&nbsp;
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge" alt="Email" />
+  </a>
+  <img src="https://img.shields.io/badge/Commits_Annuel-238636?style=for-the-badge" alt="Commits" />
   <img src="https://komarev.com/badgecounter/toggle=visitors&username=goldensam777&color=58A6FF&style=for-the-badge" alt="Visiteurs" />
 
 </div>
