@@ -42,7 +42,7 @@ Je suis un chercheur multidisciplinaire indépendant et mathématicien universal
 
 Toutes mes contributions à grande échelle, mes équipes de hackathons et mes collaborations scientifiques sont centralisées ici :
 
-> ### 🚀 [Accéder à mon Organisation GitHub (Nom_De_Ton_Orga)](#)
+> ### 🚀 [Savoir Plus sur `Leumas Labs`](https://github.com/leumas-labs)
 > * **Labo R&D :** Dépôts de recherche théorique et implémentations de modèles du projet *IA Univers*.
 > * **Hackathons & Projets Éphémères :** Code source de nos productions d'équipe en compétition.
 > * **Open Source Hub :** Outils collaboratifs pour la communauté scientifique.
