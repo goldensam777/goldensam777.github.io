@@ -1,55 +1,69 @@
 <div align="center">
+  <h2 style="font-family: Arial, sans-serif;">YEVI Mawuli Péniel Samuel</h2>
 
-  <!-- 1. LA BANNIÈRE (Style Omotola) -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=040d21,0b1930,000000&height=200&section=header&text=Samuel%20YEVI&fontSize=55&fontColor=ffffff&desc=Math%C3%A9maticien%20Universaliste%20%7C%20Chercheur%20Ind%C3%A9pendant&descSize=22&descAlignY=75" width="100%" alt="Bannière Samuel YEVI" />
-  <br/><br/>
-
-  <!-- 2. EFFET MACHINE À ÉCRIRE (Avec Optima, immo absoluta perfectio) -->
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&width=600&lines=Optima%2C+immo+absoluta+perfectio.;Construire%2C+chercher%2C+formaliser...;Python+%7C+Quantum+Physics+%7C+AI;Chercheur+Multidisciplinaire;Math%C3%A9matiques+Fondamentales" alt="Typing Effect" />
-
-  <br/><br/>
-
-  <!-- 3. LES BADGES DOUBLE-TEXTE (Titre à gauche, Valeur à droite) -->
   <a href="https://www.linkedin.com/in/samuel-yevi-b42071388/" target="_blank">
-    <img src="https://img.shields.io/badge/LINKEDIN-SAMUEL%20YEVI-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=2D333B" alt="LinkedIn" />
+  <img src="https://img.shields.io/badge/LINKEDIN-SAMUEL%20YEVI-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=2D333B" alt="LinkedIn" />
   </a>
   <a href="mailto:leumasnedlogdev777@gmail.com">
-    <img src="https://img.shields.io/badge/EMAIL-LEUMASNEDLOGDEV777@GMAIL.COM-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=2D333B" alt="Email" />
+    <img src="https://img.shields.io/badge/leumasnedlogdev777@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=2D333B" alt="Email" />
   </a>
-  <br/>
+    <br/>
   <img src="https://img.shields.io/badge/COMMITS%20ANNUELS-800%2B-238636?style=for-the-badge&logo=github&logoColor=white&labelColor=2D333B" alt="Commits" />
   <img src="https://img.shields.io/badge/STATUT-FOCUS-58A6FF?style=for-the-badge&labelColor=2D333B" alt="Statut" />
+<br/>
 
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=3000&pause=1000&color=1A73E8&center=true&vCenter=true&width=600&lines=&gt;&gt;%20Math%C3%A9matiques%2C%20Physique%20Quantique%2C%20IA;&gt;&gt;%20Python%2C%20C%2C%20Rust;&gt;&gt;%20Optima%2C%20immo%20absoluta%20perfectio." alt="Typed Text" />
 </div>
 
 ---
 
-## 🪐 À propos de moi
+## Qui suis-je ?
 
-Je suis un chercheur multidisciplinaire indépendant et mathématicien universaliste. Mon approche repose sur la conceptualisation de passerelles formelles entre des disciplines complexes. J'utilise des méthodes heuristiques et intuitives pour réinventer et condenser les formalisations mathématiques, afin d'accélérer la modélisation de systèmes dynamiques et physiques.
-
----
-
-## 🔬 Vecteurs de Recherche Principaux
-
-* **Intelligence Artificielle Universelle :** Conception de modèles prédictifs basés sur des systèmes d'équations différentielles complexes pour capturer la dynamique de l'espace-temps.
-* **Optimisation d'Architectures Séquentielles :** Recherche de variantes théoriques pour les architectures de State Space Models (SSMs), notamment des améliorations sur les scans non-aplatis pour les modèles Mamba.
-* **Physique Quantique & Calcul Parallèle :** Modélisation d'opérateurs en analyse fonctionnelle appliqués aux états quantiques, couplée à l'implémentation d'algorithmes hautes performances.
+Je suis YEVI Mawuli Péniel Samuel, étudiant en Systèmes Embarqués & IoT à l'[Institut de Formation et de Recherche en Informatique](https://ifri-uac.bj), et chercheur autodidacte multidisciplinaire.
 
 ---
 
-## 🏢 Mon Hub de Recherche & Collaborations
+## Intérêts de recherche
 
-Toutes mes contributions à grande échelle, mes équipes de hackathons et mes collaborations scientifiques sont centralisées ici :
+Calcul parallèle et architectures bas niveau.
+Modèles à espaces d'états et séquences longues.
+Intersection physique, information et computation.
 
-> ### 🚀 [Savoir Plus sur `Leumas Labs`](https://github.com/leumas-labs)
-> * **Labo R&D :** Dépôts de recherche théorique et implémentations de modèles du projet *IA Univers*.
-> * **Hackathons & Projets Éphémères :** Code source de nos productions d'équipe en compétition.
-> * **Open Source Hub :** Outils collaboratifs pour la communauté scientifique.
+---
+
+## Mes compétences
+
+J'écris mes frameworks et mes modèles d'IA en C et en assembleur x86-64, avec des kernels CUDA quand le GPU est nécessaire. Python pour le reste — Django, agents locaux, pipelines de données. Je construis aussi côté frontend : React, Next.js, TypeScript.
+
+Je travaille actuellement sur Rust, NumPy, Scikit-Learn et PyTorch pour aller plus loin dans le calcul scientifique et le deep learning. Je m'intéresse au prompt engineering — collaborer efficacement avec les modèles de langage pour obtenir des résultats précis et reproductibles.
+
+---
+
+## Projets
+
+| Projet | Description |
+|--------|-------------|
+| [optimatrix](https://github.com/goldensam777/optimatrix) | Primitives numériques bas niveau — x86-64 ASM/AVX2, C, CUDA, Python bindings |
+| [k-mamba-c](https://github.com/leumas-labs/k-mamba-c) | Implémentation Mamba 3 avec convND et scanND |
+| [bissi](https://github.com/Smart-Learn-Squad/bissi) | Assistant IA local-first propulsé par Gemma 4 |
+| [premier.js](https://github.com/goldensam777/premier_js) | Framework de composants React/Next.js |
+
+---
+
+## Hackathons
+
+- **Gemma 4 Good Hackathon**
+  - Projet soumis : [Bissi](https://github.com/Smart-Learn-Squad/bissi) — assistant IA local-first propulsé par Gemma 4.
+
+- **DataTour — Coupe d'Afrique des Nations en Science des Données**
+  - Inscrit — édition 2026.
+
+- **Bitcoin Mastermind Hackathon 2026**
+  - Cotonou, juillet 2026 — en préparation.
 
 ---
 
 <div align="center">
-  <h3>📊 Flux d'Activité Globale</h3>
+  <h3>Activité Globale</h3>
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=goldensam777&theme=github_dark&area=true&hide_border=true&color=58A6FF" width="100%" alt="Activity Graph" />
 </div>
