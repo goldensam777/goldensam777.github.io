@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    /* Orbites fines, bleu électrique intense (visible sur blanc et noir) */
+    .orbit { 
+      stroke: #0066ff; 
+      stroke-width: 1.2; 
+      fill: none; 
+      opacity: 0.85;
+    }
+    /* Noyau et Électrons en Cyan Néon avec effet de lueur */
+    .particle { 
+      fill: #00f2fe; 
+      filter: url(#glow);
+    }
+  </style>
+
+  <circle cx="50" cy="50" r="7.5" class="particle" />
+
+  <g>
+    <ellipse cx="50" cy="50" rx="42" ry="14" class="orbit" />
+    <circle r="3" class="particle">
+      <animateMotion dur="4s" repeatCount="indefinite" begin="0s">
+        <mpath>
+          <path d="M 50,50 m -42,0 a 42,14 0 1,0 84,0 a 42,14 0 1,0 -84,0"/>
+        </mpath>
+      </animateMotion>
+    </circle>
+  </g>
+
+  <g transform="rotate(60 50 50)">
+    <ellipse cx="50" cy="50" rx="42" ry="14" class="orbit" />
+    <circle r="3" class="particle">
+      <animateMotion dur="3.5s" repeatCount="indefinite" begin="1s">
+        <mpath>
+          <path d="M 50,50 m -42,0 a 42,14 0 1,0 84,0 a 42,14 0 1,0 -84,0"/>
+        </mpath>
+      </animateMotion>
+    </circle>
+  </g>
+
+  <g transform="rotate(120 50 50)">
+    <ellipse cx="50" cy="50" rx="42" ry="14" class="orbit" />
+    <circle r="3" class="particle">
+      <animateMotion dur="4.2s" repeatCount="indefinite" begin="2.2s">
+        <mpath>
+          <path d="M 50,50 m -42,0 a 42,14 0 1,0 84,0 a 42,14 0 1,0 -84,0"/>
+        </mpath>
+      </animateMotion>
+    </circle>
+  </g>
+</svg>
