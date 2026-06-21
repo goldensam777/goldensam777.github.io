@@ -12,6 +12,9 @@
         if (localStorage.getItem('theme') === 'light') {
             document.body.classList.add('light-theme');
         }
+        if (localStorage.getItem('lang') === 'en') {
+            document.body.classList.add('lang-en');
+        }
     </script>
     <div class="progress-bar" id="progressBar"></div>
     
@@ -23,15 +26,28 @@
             </a>
             
             <div class="nav-links" id="navLinks">
-                <a href="#apropos" class="nav-link active">À propos</a>
-                <a href="#projets" class="nav-link">Projets Phares</a>
-                <a href="#researches" class="nav-link">Travaux de Recherches</a>
+                <a href="#apropos" class="nav-link active">
+                    <span lang="fr">À propos</span>
+                    <span lang="en">About</span>
+                </a>
+                <a href="#projets" class="nav-link">
+                    <span lang="fr">Projets Phares</span>
+                    <span lang="en">Featured Projects</span>
+                </a>
+                <a href="#researches" class="nav-link">
+                    <span lang="fr">Travaux de Recherches</span>
+                    <span lang="en">Research Work</span>
+                </a>
             </div>
             
             <div class="nav-controls">
                 <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme">
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                     <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <button class="lang-toggle" id="langToggleBtn" aria-label="Switch Language">
+                    <span lang="fr">EN</span>
+                    <span lang="en">FR</span>
                 </button>
                 <a href="https://github.com/goldensam777" target="_blank" class="github-mobile-btn" aria-label="GitHub">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -52,10 +68,14 @@
                 <span class="first-name">Samuel Mawuli Péniel</span>
                 <span class="last-name">YEVI</span>
             </h1>
-            <p class="hero-subtitle">Embedded Systems &amp; IoT Student &bull; Self-Taught AI &amp; Systems Researcher</p>
+            <p class="hero-subtitle">
+                <span lang="fr">Étudiant en Systèmes Embarqués &amp; IoT &bull; Chercheur autodidacte en IA &amp; Systèmes</span>
+                <span lang="en">Embedded Systems &amp; IoT Student &bull; Self-Taught AI &amp; Systems Researcher</span>
+            </p>
             
             <div class="typing-animation">
-                <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=3000&pause=1000&color=1A73E8&center=true&vCenter=true&width=750&lines=Scientific+Computing+%7C+AI+Systems+%7C+Low-Level+Engineering;C+%7C+C%2B%2B+%7C+Rust+%7C+Python+%7C+CUDA;Building+systems+to+explore+computation;Optima%2C+immo+absoluta+perfectio" alt="Typing Animation" />
+                <img lang="fr" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=3000&pause=1000&color=1A73E8&center=true&vCenter=true&width=750&lines=Calcul+Scientifique+%7C+Syst%C3%A8mes+d'IA+%7C+Ing%C3%A9nierie+Bas-Niveau;C+%7C+C%2B%2B+%7C+Rust+%7C+Python+%7C+CUDA;Construire+des+syst%C3%A8mes+pour+explorer+le+calcul;Optima%2C+immo+absoluta+perfectio" alt="Typing Animation" />
+                <img lang="en" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=3000&pause=1000&color=1A73E8&center=true&vCenter=true&width=750&lines=Scientific+Computing+%7C+AI+Systems+%7C+Low-Level+Engineering;C+%7C+C%2B%2B+%7C+Rust+%7C+Python+%7C+CUDA;Building+systems+to+explore+computation;Optima%2C+immo+absoluta+perfectio" alt="Typing Animation" />
             </div>
         </div>
     </header>
@@ -63,139 +83,265 @@
     <div class="container">
         
         <section id="apropos">
-            <h2>À propos</h2>
-            <p>Je suis <strong>YEVI Mawuli Péniel Samuel</strong>, étudiant en <strong>Systèmes Embarqués & IoT</strong> à l'IFRI-UAC et chercheur autodidacte.</p>
-            <p>Je développe des systèmes logiciels à différents niveaux d'abstraction : du calcul bas niveau (C, assembleur, CUDA) aux architectures de modèles d'intelligence artificielle et aux outils de développement expérimentaux.</p>
-            <p>Mon approche est orientée recherche et exploration : je construis des systèmes pour comprendre le calcul, l'information et les modèles qui en émergent.</p>
+            <h2>
+                <span lang="fr">À propos</span>
+                <span lang="en">About</span>
+            </h2>
+            <p>
+                <span lang="fr">Je suis <strong>YEVI Mawuli Péniel Samuel</strong>, étudiant en <strong>Systèmes Embarqués & IoT</strong> à l'IFRI-UAC et chercheur autodidacte.</span>
+                <span lang="en">I am <strong>YEVI Mawuli Péniel Samuel</strong>, an <strong>Embedded Systems & IoT</strong> student at IFRI-UAC and a self-taught researcher.</span>
+            </p>
+            <p>
+                <span lang="fr">Je développe des systèmes logiciels à différents niveaux d'abstraction : du calcul bas niveau (C, assembleur, CUDA) aux architectures de modèles d'intelligence artificielle et aux outils de développement expérimentaux.</span>
+                <span lang="en">I develop software systems at various levels of abstraction: from low-level computing (C, assembly, CUDA) to artificial intelligence model architectures and experimental development tools.</span>
+            </p>
+            <p>
+                <span lang="fr">Mon approche est orientée recherche et exploration : je construis des systèmes pour comprendre le calcul, l'information et les modèles qui en émergent.</span>
+                <span lang="en">My approach is research and exploration-oriented: I build systems to understand computation, information, and the models that emerge from them.</span>
+            </p>
         </section>
         
         <section id="vision">
-            <h2>Vision</h2>
-            <p>Je considère les logiciels comme des instruments d'exploration.</p>
-            <p>Mes travaux s'articulent autour d'une question centrale :</p>
-            <p><strong>comment représenter, transformer et optimiser l'information à travers des systèmes computationnels ?</strong></p>
-            <p>Cela inclut :</p>
+            <h2>
+                <span lang="fr">Vision</span>
+                <span lang="en">Vision</span>
+            </h2>
+            <p>
+                <span lang="fr">Je considère les logiciels comme des instruments d'exploration.</span>
+                <span lang="en">I consider software as instruments of exploration.</span>
+            </p>
+            <p>
+                <span lang="fr">Mes travaux s'articulent autour d'une question centrale :</span>
+                <span lang="en">My work revolves around a central question:</span>
+            </p>
+            <p>
+                <strong>
+                    <span lang="fr">comment représenter, transformer et optimiser l'information à travers des systèmes computationnels ?</span>
+                    <span lang="en">how to represent, transform, and optimize information through computational systems?</span>
+                </strong>
+            </p>
+            <p>
+                <span lang="fr">Cela inclut :</span>
+                <span lang="en">This includes:</span>
+            </p>
             <ul>
-                <li>le calcul numérique haute performance,</li>
-                <li>les architectures de modèles séquentiels,</li>
-                <li>les systèmes d'intelligence artificielle locale,</li>
-                <li>et la conception d'outils de recherche expérimentaux.</li>
+                <li>
+                    <span lang="fr">le calcul numérique haute performance,</span>
+                    <span lang="en">high-performance numerical computing,</span>
+                </li>
+                <li>
+                    <span lang="fr">les architectures de modèles séquentiels,</span>
+                    <span lang="en">sequential model architectures,</span>
+                </li>
+                <li>
+                    <span lang="fr">les systèmes d'intelligence artificielle locale,</span>
+                    <span lang="en">local artificial intelligence systems,</span>
+                </li>
+                <li>
+                    <span lang="fr">et la conception d'outils de recherche expérimentaux.</span>
+                    <span lang="en">and the design of experimental research tools.</span>
+                </li>
             </ul>
         </section>
         
         <section id="domaines">
-            <h2>Domaines d'exploration</h2>
+            <h2>
+                <span lang="fr">Domaines d'exploration</span>
+                <span lang="en">Fields of Exploration</span>
+            </h2>
             <ul>
-                <li>Calcul scientifique et architectures parallèles</li>
-                <li>Intelligence artificielle et modèles séquentiels (SSM, Transformers, Mamba)</li>
-                <li>Systèmes bas niveau et optimisation (C, ASM, CUDA)</li>
-                <li>IA locale et systèmes embarqués</li>
-                <li>Ingénierie des frameworks et runtimes</li>
-                <li>Interaction entre physique, information et computation</li>
+                <li>
+                    <span lang="fr">Calcul scientifique et architectures parallèles</span>
+                    <span lang="en">Scientific computing and parallel architectures</span>
+                </li>
+                <li>
+                    <span lang="fr">Intelligence artificielle et modèles séquentiels (SSM, Transformers, Mamba)</span>
+                    <span lang="en">Artificial intelligence and sequential models (SSM, Transformers, Mamba)</span>
+                </li>
+                <li>
+                    <span lang="fr">Systèmes bas niveau et optimisation (C, ASM, CUDA)</span>
+                    <span lang="en">Low-level systems and optimization (C, ASM, CUDA)</span>
+                </li>
+                <li>
+                    <span lang="fr">IA locale et systèmes embarqués</span>
+                    <span lang="en">Local AI and embedded systems</span>
+                </li>
+                <li>
+                    <span lang="fr">Ingénierie des frameworks et runtimes</span>
+                    <span lang="en">Framework and runtime engineering</span>
+                </li>
+                <li>
+                    <span lang="fr">Interaction entre physique, information et computation</span>
+                    <span lang="en">Interaction between physics, information, and computation</span>
+                </li>
             </ul>
         </section>
 
         <section id="projets">
-            <h2>Projets Phares</h2>
-            <p>Je travaille sur plusieurs projets de recherche et d'ingénierie logicielle :</p>
+            <h2>
+                <span lang="fr">Projets Phares</span>
+                <span lang="en">Featured Projects</span>
+            </h2>
+            <p>
+                <span lang="fr">Je travaille sur plusieurs projets de recherche et d'ingénierie logicielle :</span>
+                <span lang="en">I work on several research and software engineering projects:</span>
+            </p>
             <table>
                 <thead>
                     <tr>
-                        <th>Projet</th>
-                        <th>Description</th>
+                        <th>
+                            <span lang="fr">Projet</span>
+                            <span lang="en">Project</span>
+                        </th>
+                        <th>
+                            <span lang="fr">Description</span>
+                            <span lang="en">Description</span>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><strong>Optimatrix</strong></td>
-                        <td>Substrat de calcul numérique bas niveau &mdash; GEMM, Conv1D/ND, activations AVX2, FFT. C / Assembleur x86-64 / CUDA / Python bindings.</td>
+                        <td>
+                            <span lang="fr">Substrat de calcul numérique bas niveau &mdash; GEMM, Conv1D/ND, activations AVX2, FFT. C / Assembleur x86-64 / CUDA / Python bindings.</span>
+                            <span lang="en">Low-level numerical computing substrate &mdash; GEMM, Conv1D/ND, AVX2 activations, FFT. C / x86-64 Assembly / CUDA / Python bindings.</span>
+                        </td>
                     </tr>
                     <tr>
                         <td><strong>Bissi</strong></td>
-                        <td>Assistant IA local-first 100% hors-ligne. Gemma 4 affiné via Unsloth &rarr; Q4_K_M &rarr; llama.cpp &rarr; FastAPI &rarr; Electron. Conçu pour les environnements à faible connectivité.</td>
+                        <td>
+                            <span lang="fr">Assistant IA local-first 100% hors-ligne. Gemma 4 affiné via Unsloth &rarr; Q4_K_M &rarr; llama.cpp &rarr; FastAPI &rarr; Electron. Conçu pour les environnements à faible connectivité.</span>
+                            <span lang="en">100% offline local-first AI assistant. Gemma 4 fine-tuned via Unsloth &rarr; Q4_K_M &rarr; llama.cpp &rarr; FastAPI &rarr; Electron. Built for low-connectivity environments.</span>
+                        </td>
                     </tr>
                     <tr>
                         <td><strong>Plenum</strong></td>
-                        <td>Outil de délibération multi-LLM. Réinjecte les réponses de chaque modèle dans le prompt des autres à chaque tour &mdash; friction fertile.</td>
+                        <td>
+                            <span lang="fr">Outil de délibération multi-LLM. Réinjecte les réponses de chaque modèle dans le prompt des autres à chaque tour &mdash; friction fertile.</span>
+                            <span lang="en">Multi-LLM deliberation tool. Feeds each model's response back into the prompt of others at each turn &mdash; fertile friction.</span>
+                        </td>
                     </tr>
                     <tr>
                         <td><strong>MentorLink</strong></td>
-                        <td>Plateforme académique de mise en relation étudiants-mentors. Django + Channels + PostgreSQL + WebSockets.</td>
+                        <td>
+                            <span lang="fr">Plateforme académique de mise en relation étudiants-mentors. Django + Channels + PostgreSQL + WebSockets.</span>
+                            <span lang="en">Academic student-mentor matching platform. Django + Channels + PostgreSQL + WebSockets.</span>
+                        </td>
                     </tr>
                     <tr>
                         <td><strong>Argus</strong></td>
-                        <td>Modèle de détection de fraude financière &mdash; IsolationForest + XGBoost. DataTour 2026.</td>
+                        <td>
+                            <span lang="fr">Modèle de détection de fraude financière &mdash; IsolationForest + XGBoost. DataTour 2026.</span>
+                            <span lang="en">Financial fraud detection model &mdash; IsolationForest + XGBoost. DataTour 2026.</span>
+                        </td>
                     </tr>
                     <tr>
                         <td><strong>Premier.js</strong></td>
-                        <td>Framework expérimental de composants frontend.</td>
+                        <td>
+                            <span lang="fr">Framework expérimental de composants frontend.</span>
+                            <span lang="en">Experimental frontend component framework.</span>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
         <section id="researches">
-            <h2>Travaux de Recherches</h2>
-            <!-- <h3 style="margin-top: 20px;">Théories Fondamentales</h3>
+            <h2>
+                <span lang="fr">Travaux de Recherches</span>
+                <span lang="en">Research Work</span>
+            </h2>
+            <!-- <h3 style="margin-top: 20px;"><span lang="fr">Théories Fondamentales</span><span lang="en">Fundamental Theories</span></h3>
             <ul>
                 <li>
-                    <strong>Équilibre des Volontés (≈ 8 ans)</strong> &mdash; 
-                    L'équilibre des volontés est la somme de toutes, quel que soit le signe. 
-                    Intuition fondatrice sur l'émergence et la dynamique collective.
+                    <strong><span lang="fr">Équilibre des Volontés (≈ 8 ans)</span><span lang="en">Balance of Wills (~ 8 years)</span></strong> &mdash; 
+                    <span lang="fr">L'équilibre des volontés est la somme de toutes, quel que soit le signe. Intuition fondatrice sur l'émergence et la dynamique collective.</span>
+                    <span lang="en">The balance of wills is the sum of all, regardless of the sign. Foundational intuition on emergence and collective dynamics.</span>
                 </li>
                 <li>
-                    <strong>Informatique des Volontés</strong> &mdash; 
-                    La computation vue comme interaction entre volontés. 
-                    Concepts : friction fertile, pluralité, émergence, coopération compétitive.
+                    <strong><span lang="fr">Informatique des Volontés</span><span lang="en">Wills Informatics</span></strong> &mdash; 
+                    <span lang="fr">La computation vue comme interaction entre volontés. Concepts : friction fertile, pluralité, émergence, coopération compétitive.</span>
+                    <span lang="en">Computation viewed as an interaction between wills. Concepts: fertile friction, plurality, emergence, competitive cooperation.</span>
                 </li>
             </ul> -->
 
-            <h3 style="margin-top: 30px;">Recherches Actives</h3>
+            <h3 style="margin-top: 30px;">
+                <span lang="fr">Recherches Actives</span>
+                <span lang="en">Active Research</span>
+            </h3>
             <ul>
                 <li>
                     <strong>Index State Space Models (ISSM)</strong> &mdash; 
-                    Hypothèse : le temps n'est qu'un cas particulier de paramétrisation d'un SSM. 
-                    Généralisation des SSM classiques par remplacement du facteur de discrétisation 
-                    temporelle par un facteur d'indexation général. Les SSM classiques apparaissent 
-                    comme cas particulier d'une indexation linéaire uniforme.
+                    <span lang="fr">Hypothèse : le temps n'est qu'un cas particulier de paramétrisation d'un SSM. Généralisation des SSM classiques par remplacement du facteur de discrétisation temporelle par un facteur d'indexation général. Les SSM classiques apparaissent comme cas particulier d'une indexation linéaire uniforme.</span>
+                    <span lang="en">Hypothesis: time is only a special case of SSM parameterization. Generalization of classical SSMs by replacing the temporal discretization factor with a general indexation factor. Classical SSMs appear as a special case of uniform linear indexation.</span>
                 </li>
                 <li>
-                    <strong>Serenity / TEM</strong> &mdash; 
-                    Résolution des équations différentielles non linéaires par projection dans un 
-                    environnement de dimension supérieure (linéarisation via opérateurs de Koopman).
+                    <strong>Serenity / TEM</strong> &mdash;
+                    <span lang="fr">Résolution des équations différentielles non linéaires par projection dans un environnement de dimension supérieure (linéarisation via opérateurs de Koopman).</span>
+                    <span lang="en">Solving non-linear differential equations by projection into a higher-dimensional space (linearization via Koopman operators).</span>
                 </li>
                 <li>
-                    <strong>Reconstruction implicite des poids</strong> &mdash; 
-                    Les poids d'un modèle pourraient émerger d'un processus continu plutôt qu'être 
-                    stockés de manière discrète. Sources : HiPPO, processus quantiques, mémoire implicite.
+                    <strong>Reconstruction implicite des poids</strong> &mdash;
+                    <span lang="fr">Les poids d'un modèle pourraient émerger d'un processus continu plutôt qu'être stockés de manière discrète. Sources : HiPPO, processus quantiques, mémoire implicite.</span>
+                    <span lang="en">Model weights could emerge from a continuous process rather than being stored discretely. Sources: HiPPO, quantum processes, implicit memory.</span>
                 </li>
             </ul>
         </section>
         
         <section id="hackathons">
-            <h2>Hackathons & exploration</h2>
+            <h2>
+                <span lang="fr">Hackathons & exploration</span>
+                <span lang="en">Hackathons & Exploration</span>
+            </h2>
             <ul>
-                <li><strong>Gemma 4 Good Hackathon</strong> — Bissi (assistant IA local-first)</li>
-                <li><strong>DataTour 2026</strong> — compétition en science des données</li>
-                <li><strong>Bitcoin Mastermind Hackathon 2026</strong> — participation en préparation</li>
+                <li>
+                    <span lang="fr"><strong>Gemma 4 Good Hackathon</strong> — Bissi (assistant IA local-first)</span>
+                    <span lang="en"><strong>Gemma 4 Good Hackathon</strong> — Bissi (local-first AI assistant)</span>
+                </li>
+                <li>
+                    <span lang="fr"><strong>DataTour 2026</strong> — compétition en science des données</span>
+                    <span lang="en"><strong>DataTour 2026</strong> — data science competition</span>
+                </li>
+                <li>
+                    <span lang="fr"><strong>Bitcoin Mastermind Hackathon 2026</strong> — participation en préparation</span>
+                    <span lang="en"><strong>Bitcoin Mastermind Hackathon 2026</strong> — preparation in progress</span>
+                </li>
             </ul>
         </section>
         
         
         <section id="stack">
-            <h2>Stack technique</h2>
+            <h2>
+                <span lang="fr">Stack technique</span>
+                <span lang="en">Tech Stack</span>
+            </h2>
             <div class="tech-stack">
                 <div class="tech-category">
-                    <h3>Bas niveau & performance</h3>
+                    <h3>
+                        <span lang="fr">Bas niveau & performance</span>
+                        <span lang="en">Low-Level & Performance</span>
+                    </h3>
                     <p>C • C++ • Assembly x86-64 • CUDA • Linux</p>
                 </div>
                 <div class="tech-category">
-                    <h3>IA & calcul scientifique</h3>
-                    <p>Python • NumPy • PyTorch • Scikit-Learn • SciPy • SymPy • Pandas • Matplotlib • Seaborn</p>
+                    <h3>
+                        <span lang="fr">IA & calcul scientifique</span>
+                        <span lang="en">AI & Scientific Computing</span>
+                    </h3>
+                    <p>
+                        <span lang="fr">Python • NumPy (en apprentissage) • PyTorch (en apprentissage) • Scikit-Learn (en apprentissage) • SciPy (en apprentissage) • SymPy (en apprentissage) • Pandas • Matplotlib • Seaborn (en apprentissage)</span>
+                        <span lang="en">Python • NumPy (learning) • PyTorch (learning) • Scikit-Learn (learning) • SciPy (learning) • SymPy (learning) • Pandas • Matplotlib • Seaborn (learning)</span>
+                    </p>
                 </div>
                 <div class="tech-category">
-                    <h3>Systèmes & développement</h3>
-                    <p>Rust (en apprentissage) • Git • TypeScript • React • Next.js • Django</p>
+                    <h3>
+                        <span lang="fr">Systèmes & développement</span>
+                        <span lang="en">Systems & Development</span>
+                    </h3>
+                    <p>
+                        <span lang="fr">Rust (en apprentissage) • Git • TypeScript • React • Next.js • Django</span>
+                        <span lang="en">Rust (learning) • Git • TypeScript • React • Next.js • Django</span>
+                    </p>
                 </div>
             </div>
         </section>
@@ -216,11 +362,18 @@
         </section>
         
         <section id="collaboration">
-            <h2>Collaboration</h2>
-            <p>Je suis ouvert aux collaborations de recherche, projets expérimentaux et partenariats techniques dans les domaines du calcul scientifique, de l'intelligence artificielle et des systèmes logiciels.</p>
+            <h2>
+                <span lang="fr">Collaboration</span>
+                <span lang="en">Collaboration</span>
+            </h2>
+            <p>
+                <span lang="fr">Je suis ouvert aux collaborations de recherche, projets expérimentaux et partenariats techniques dans les domaines du calcul scientifique, de l'intelligence artificielle et des systèmes logiciels.</span>
+                <span lang="en">I am open to research collaborations, experimental projects, and technical partnerships in the fields of scientific computing, artificial intelligence, and software systems.</span>
+            </p>
             
             <div class="collaboration-status">
-                <img src="https://img.shields.io/badge/STATUS-FOCUS-58A6FF?style=for-the-badge&labelColor=2D333B" alt="Status" class="status-badge-inline" />
+                <img lang="fr" src="https://img.shields.io/badge/STATUT-FOCUS-58A6FF?style=for-the-badge&labelColor=2D333B" alt="Statut" class="status-badge-inline" />
+                <img lang="en" src="https://img.shields.io/badge/STATUS-FOCUS-58A6FF?style=for-the-badge&labelColor=2D333B" alt="Status" class="status-badge-inline" />
             </div>
             
             <div class="collaboration-badges">
@@ -271,6 +424,19 @@
                     localStorage.setItem('theme', 'light');
                 } else {
                     localStorage.setItem('theme', 'dark');
+                }
+            });
+        }
+
+        // Language toggle logic
+        const langToggleBtn = document.getElementById('langToggleBtn');
+        if (langToggleBtn) {
+            langToggleBtn.addEventListener('click', () => {
+                document.body.classList.toggle('lang-en');
+                if (document.body.classList.contains('lang-en')) {
+                    localStorage.setItem('lang', 'en');
+                } else {
+                    localStorage.setItem('lang', 'fr');
                 }
             });
         }

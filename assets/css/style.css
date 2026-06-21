@@ -497,6 +497,12 @@ li:hover::before {
 }
 
 /* Cards style: Used only on sub-blocks (tech categories, researches lists, table, quote) */
+.tech-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .tech-category {
     background: var(--bg-card);
     padding: 30px;
@@ -530,7 +536,7 @@ li:hover::before {
 #researches ul {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     margin-left: 0;
 }
 
@@ -871,7 +877,7 @@ a:hover {
     gap: 15px;
 }
 
-.theme-toggle, .github-mobile-btn {
+.theme-toggle, .github-mobile-btn, .lang-toggle {
     background: transparent;
     border: none;
     cursor: pointer;
@@ -885,10 +891,21 @@ a:hover {
     border: 1px solid transparent;
 }
 
-.theme-toggle:hover, .github-mobile-btn:hover {
+.theme-toggle:hover, .github-mobile-btn:hover, .lang-toggle:hover {
     color: var(--primary);
     background: rgba(56, 189, 248, 0.08);
     border-color: rgba(56, 189, 248, 0.15);
+}
+
+.lang-toggle {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.82em;
+    width: 34px;
+    height: 34px;
+    padding: 0 !important;
+    line-height: 34px;
+    text-align: center;
 }
 
 .github-mobile-btn {
@@ -921,11 +938,11 @@ body.light-theme .moon-icon {
     display: none;
 }
 
-body.light-theme .theme-toggle, body.light-theme .github-mobile-btn {
+body.light-theme .theme-toggle, body.light-theme .github-mobile-btn, body.light-theme .lang-toggle {
     color: #475569;
 }
 
-body.light-theme .theme-toggle:hover, body.light-theme .github-mobile-btn:hover {
+body.light-theme .theme-toggle:hover, body.light-theme .github-mobile-btn:hover, body.light-theme .lang-toggle:hover {
     color: var(--primary);
     background: rgba(56, 189, 248, 0.08);
 }
@@ -1047,3 +1064,56 @@ body.light-theme strong {
         border: 1px solid rgba(15, 23, 42, 0.06);
     }
 }
+
+/* --- Language Switcher & Editorial Headers Translation --- */
+[lang="en"] {
+    display: none !important;
+}
+body.lang-en [lang="fr"] {
+    display: none !important;
+}
+body.lang-en span[lang="en"],
+body.lang-en a[lang="en"],
+body.lang-en strong[lang="en"],
+body.lang-en em[lang="en"] {
+    display: inline !important;
+}
+body.lang-en p[lang="en"],
+body.lang-en div[lang="en"],
+body.lang-en h2[lang="en"],
+body.lang-en h3[lang="en"] {
+    display: block !important;
+}
+body.lang-en img[lang="en"] {
+    display: inline-block !important;
+}
+body.lang-en li[lang="en"] {
+    display: list-item !important;
+}
+body.lang-en table[lang="en"] {
+    display: table !important;
+}
+body.lang-en thead[lang="en"] {
+    display: table-header-group !important;
+}
+body.lang-en tbody[lang="en"] {
+    display: table-row-group !important;
+}
+body.lang-en tr[lang="en"] {
+    display: table-row !important;
+}
+body.lang-en th[lang="en"],
+body.lang-en td[lang="en"] {
+    display: table-cell !important;
+}
+
+/* Editorial Section label replacements in English */
+body.lang-en #apropos h2::before { content: 'OVERVIEW'; }
+body.lang-en #vision h2::before { content: 'VISION & FOCUS'; }
+body.lang-en #domaines h2::before { content: 'FIELDS OF STUDY'; }
+body.lang-en #hackathons h2::before { content: 'COMPETITIONS'; }
+body.lang-en #stack h2::before { content: 'TECH STACK'; }
+body.lang-en #github h2::before { content: 'CONTRIBUTIONS'; }
+body.lang-en #collaboration h2::before { content: 'COLLABORATION'; }
+body.lang-en #projets h2::before { content: 'PORTFOLIO'; }
+body.lang-en #researches h2::before { content: 'RESEARCH LAB'; }
