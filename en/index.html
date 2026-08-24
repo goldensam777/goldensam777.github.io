@@ -146,18 +146,34 @@
 				<article class="card reveal">
 					<span class="eyebrow">Stack</span>
 					<h2>Technologies &amp; Tools</h2>
-					<div class="chips">
-						<span class="chip">C / C++ (C11)</span>
-						<span class="chip">Rust</span>
-						<span class="chip">OCaml</span>
-						<span class="chip">Python</span>
-						<span class="chip">LLVM IR</span>
-						<span class="chip">llama.cpp / GGUF</span>
-						<span class="chip">Tauri v2</span>
-						<span class="chip">FastAPI</span>
-						<span class="chip">Electron</span>
-						<span class="chip">Linux / Valgrind</span>
-						<span class="chip">Git / GitHub</span>
+					<div class="skills-matrix">
+						<div class="skill-group">
+							<span class="skill-group-title">Systems &amp; Compilers</span>
+							<div class="chips">
+								<span class="chip">C / C++ (C11)</span>
+								<span class="chip">Rust</span>
+								<span class="chip">OCaml</span>
+								<span class="chip">LLVM IR</span>
+								<span class="chip">Linux / Valgrind</span>
+							</div>
+						</div>
+						<div class="skill-group">
+							<span class="skill-group-title">AI &amp; Scientific Computing</span>
+							<div class="chips">
+								<span class="chip">Python</span>
+								<span class="chip">llama.cpp / GGUF</span>
+								<span class="chip">Unsloth</span>
+								<span class="chip">FastAPI</span>
+							</div>
+						</div>
+						<div class="skill-group">
+							<span class="skill-group-title">Runtimes &amp; Tooling</span>
+							<div class="chips">
+								<span class="chip">Tauri v2</span>
+								<span class="chip">Electron</span>
+								<span class="chip">Git / GitHub</span>
+							</div>
+						</div>
 					</div>
 				</article>
 			</div>
@@ -168,8 +184,15 @@
 				<span class="eyebrow">Featured Projects</span>
 				<h2>Research Axes &amp; Technical Prototypes</h2>
 
+				<div class="project-filter-bar">
+					<button class="filter-btn active" type="button" data-filter="all">All (6)</button>
+					<button class="filter-btn" type="button" data-filter="systems">Systems &amp; Compilers (2)</button>
+					<button class="filter-btn" type="button" data-filter="ai">AI &amp; Edge (2)</button>
+					<button class="filter-btn" type="button" data-filter="scientific">Research &amp; Computing (2)</button>
+				</div>
+
 				<div class="project-board">
-					<article class="card project reveal">
+					<article class="card project reveal" data-category="ai">
 						<div class="project-head">
 							<h3>Bissi - Local-First &amp; 100% Offline AI Agent</h3>
 						</div>
@@ -186,7 +209,7 @@
 						</p>
 					</article>
 
-					<article class="card project reveal">
+					<article class="card project reveal" data-category="scientific">
 						<div class="project-head">
 							<h3>Mercuria - Reproducible Experimentation Notebook</h3>
 						</div>
@@ -200,7 +223,7 @@
 						<p><a href="https://github.com/leumas-labs/mercuria" target="_blank" rel="noreferrer">View project</a></p>
 					</article>
 
-					<article class="card project reveal">
+					<article class="card project reveal" data-category="systems">
 						<div class="project-head">
 							<h3>Elementals - Scientific Language Compiled via LLVM</h3>
 						</div>
@@ -240,7 +263,7 @@ compute_phase(q, energy):
 						<p><a href="https://github.com/goldensam777/elementals" target="_blank" rel="noreferrer">View project</a></p>
 					</article>
 
-					<article class="card project reveal">
+					<article class="card project reveal" data-category="systems">
 						<div class="project-head">
 							<h3>logariasmós - Scientific Computing Library in C11</h3>
 						</div>
@@ -276,7 +299,7 @@ compute_phase(q, energy):
 						<p><a href="https://github.com/goldensam777/logariasmos" target="_blank" rel="noreferrer">View project</a></p>
 					</article>
 
-					<article class="card project reveal">
+					<article class="card project reveal" data-category="ai">
 						<div class="project-head">
 							<h3>Automaton Universale - Runtime for Edge AI &amp; Robotics</h3>
 						</div>
@@ -307,7 +330,7 @@ app = <span class="el-ty">Automaton</span>(model=<span class="el-st">"edge_obsta
 						<p><a href="https://github.com/goldensam777/automaton" target="_blank" rel="noreferrer">View project</a></p>
 					</article>
 
-					<article class="card project reveal">
+					<article class="card project reveal" data-category="scientific">
 						<div class="project-head">
 							<h3>Graphy - Graph Theory Library</h3>
 						</div>
@@ -405,6 +428,25 @@ distances, predecessors = <span class="el-fn">dijkstra</span>(g, source=<span cl
 				localStorage.setItem('theme', nextTheme);
 			});
 		}
+
+		// Project Category Filtering
+		const filterButtons = document.querySelectorAll('.filter-btn');
+		const projectCards = document.querySelectorAll('.project-board .project');
+		filterButtons.forEach(btn => {
+			btn.addEventListener('click', () => {
+				filterButtons.forEach(b => b.classList.remove('active'));
+				btn.classList.add('active');
+				const filter = btn.getAttribute('data-filter');
+				projectCards.forEach(card => {
+					const category = card.getAttribute('data-category');
+					if (filter === 'all' || category === filter) {
+						card.classList.remove('is-hidden');
+					} else {
+						card.classList.add('is-hidden');
+					}
+				});
+			});
+		});
 	</script>
 </body>
 </html>
