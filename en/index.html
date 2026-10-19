@@ -275,22 +275,27 @@
 									<span>Copy</span>
 								</button>
 							</div>
-							<pre class="editor-body"><code><span class="el-cm">(&lt; Computational graph &amp; autodiff: Value node and gradients &gt;)</span>
+							<pre class="editor-body"><code><span class="el-cm">(&lt; Computational graph &amp; autodiff: instance and class methods &gt;)</span>
 <span class="el-kw">class</span> <span class="el-ty">Value</span>:
     <span class="el-dc">#from</span>(* data: <span class="el-ty">real</span>, children: <span class="el-ty">tuple</span> = (), op: <span class="el-ty">string</span> = <span class="el-st">""</span>)
     .<span class="el-fn">grad</span>: <span class="el-ty">real</span> = <span class="el-hn">0.0</span>
 
-<span class="el-fn">mul</span>(a: <span class="el-ty">Value</span>, b: <span class="el-ty">Value</span>) -&gt; <span class="el-ty">Value</span>:
-    =&gt; <span class="el-ty">Value</span>(a.data * b.data, (a, b), <span class="el-st">"*"</span>)
+    .<span class="el-fn">mul</span>(other: <span class="el-ty">Value</span>) -&gt; <span class="el-ty">Value</span>:
+        =&gt; <span class="el-ty">Value</span>(.data * other.data, (self, other), <span class="el-st">"*"</span>)
 
-<span class="el-fn">backward_mul</span>(out: <span class="el-ty">Value</span>, left: <span class="el-ty">Value</span>, right: <span class="el-ty">Value</span>) -&gt; <span class="el-ty">none</span>:
-    left.grad = left.grad + out.grad * right.data
-    right.grad = right.grad + out.grad * left.data
-    =&gt; <span class="el-kw">none</span>
+    .<span class="el-fn">backward_mul</span>(left: <span class="el-ty">Value</span>, right: <span class="el-ty">Value</span>) -&gt; <span class="el-ty">none</span>:
+        left.grad = left.grad + .grad * right.data
+        right.grad = right.grad + .grad * left.data
+        =&gt; <span class="el-kw">none</span>
 
-<span class="el-cm">(&lt; y = w * x + b: forward pass and accumulation &gt;)</span>
-output: <span class="el-ty">Value</span> = <span class="el-fn">add</span>(<span class="el-fn">mul</span>(w, x), b)
-output.grad = <span class="el-hn">1.0</span></code></pre>
+    cls.<span class="el-fn">constant</span>(val: <span class="el-ty">real</span>) -&gt; <span class="el-ty">Value</span>:
+        =&gt; <span class="el-ty">Value</span>(val, (), <span class="el-st">"const"</span>)
+
+<span class="el-cm">(&lt; y = w * x + b: inference &amp; backpropagation &gt;)</span>
+product: <span class="el-ty">Value</span> = w.<span class="el-fn">mul</span>(x)
+output: <span class="el-ty">Value</span> = product.<span class="el-fn">add</span>(b)
+output.grad = <span class="el-hn">1.0</span>
+product.<span class="el-fn">backward_mul</span>(w, x)</code></pre>
 						</div>
 						<p class="project-stack"><strong>Stack:</strong> Language Design, Tensors (arr), Numerical Computing, Autodiff</p>
 						<p><a href="https://github.com/goldensam777/onyx" target="_blank" rel="noreferrer">View project</a></p>
