@@ -19,7 +19,7 @@ Ce dépôt contient le code source du portfolio de YEVI Mawuli Péniel Samuel, �
 
 1. **Bissi** : Agent d'IA local-first et 100% hors ligne (Gemma 4 E2B fine-tuné avec Unsloth, quantifié en Q4_K_M).
 2. **Mercuria** : Environnement d'expérimentation scientifique orienté preuve (Rust, Tauri v2).
-3. **Elementals** : Langage de programmation pour le calcul multi-dimensionnel compilé via LLVM IR (OCaml).
+3. **Onyx** : Langage polyvalent pour la recherche, le calcul numérique et l'IA (tenseurs multidimensionnels, autodiff, syntaxe expressive).
 4. **logariasmós (numc)** : Bibliothèque de calcul scientifique modulaire en C11 (gestion mémoire stricte, Valgrind).
 5. **Automaton Universale** : Framework déclaratif pour l'IA embarquée et le contrôle cyber-physique (Python).
 6. **Graphy** : Bibliothèque formelle de théorie des graphes et algorithmique.

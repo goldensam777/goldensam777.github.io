@@ -225,13 +225,12 @@
 
 					<article class="card project reveal" data-category="systems">
 						<div class="project-head">
-							<h3>Elementals - Scientific Language Compiled via LLVM</h3>
+							<h3>Onyx - Versatile Language for Research, Numerical Computing &amp; AI</h3>
 						</div>
 						<p class="project-summary">
-							Design of a programming language dedicated to multidimensional computation and physics.
-							Elementals introduces native hypercomplex numbers (quaternions, octonions), a semantic
-							duality between pure mathematical calculations and side-effect processes, and ultra-fast
-							native compilation via LLVM IR and Clang.
+							Design of a modern programming language combining concise syntax, high performance, and expressiveness.
+							Onyx introduces native multidimensional tensors (<code>arr</code>), predictable type inference,
+							automatic differentiation (autodiff), and an execution model engineered for AI and scientific computing.
 						</p>
 						<div class="code-editor">
 							<div class="editor-header">
@@ -241,7 +240,7 @@
 										<span class="dot-yellow"></span>
 										<span class="dot-green"></span>
 									</div>
-									<span class="editor-title">quantum_field.el</span>
+									<span class="editor-title">micrograd.onx</span>
 								</div>
 								<button class="copy-btn" type="button" aria-label="Copy code" onclick="copyCode(this)">
 									<svg class="icon-copy" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
@@ -249,18 +248,25 @@
 									<span>Copy</span>
 								</button>
 							</div>
-							<pre class="editor-body"><code><span class="el-cm">->> Native hypercomplex numbers &amp; HyperNumber architecture</span>
-<span class="el-kw">element</span> <span class="el-ty">QuantumState</span>:
-    <span class="el-kw">as</span> <span class="el-ty">Field</span>
-    rotation: <span class="el-ty">HyperNumber</span> = <span class="el-hn">0.5</span> + <span class="el-hn">1.2j</span> + <span class="el-hn">3.4k</span>
-    repr = <span class="el-st">'State(|ψ⟩)'</span>
+							<pre class="editor-body"><code><span class="el-cm">(&lt; Computational graph &amp; autodiff: Value node and gradients &gt;)</span>
+<span class="el-kw">class</span> <span class="el-ty">Value</span>:
+    <span class="el-dc">#from</span>(* data: <span class="el-ty">real</span>, children: <span class="el-ty">tuple</span> = (), op: <span class="el-ty">string</span> = <span class="el-st">""</span>)
+    .<span class="el-fn">grad</span>: <span class="el-ty">real</span> = <span class="el-hn">0.0</span>
 
-<span class="el-cm">->> Pure mathematical transformation</span>
-compute_phase(q, energy):
-    q.rotation * cos²(energy) + sin²(energy)</code></pre>
+<span class="el-fn">mul</span>(a: <span class="el-ty">Value</span>, b: <span class="el-ty">Value</span>) -&gt; <span class="el-ty">Value</span>:
+    =&gt; <span class="el-ty">Value</span>(a.data * b.data, (a, b), <span class="el-st">"*"</span>)
+
+<span class="el-fn">backward_mul</span>(out: <span class="el-ty">Value</span>, left: <span class="el-ty">Value</span>, right: <span class="el-ty">Value</span>) -&gt; <span class="el-ty">none</span>:
+    left.grad = left.grad + out.grad * right.data
+    right.grad = right.grad + out.grad * left.data
+    =&gt; <span class="el-kw">none</span>
+
+<span class="el-cm">(&lt; y = w * x + b: forward pass and accumulation &gt;)</span>
+output: <span class="el-ty">Value</span> = <span class="el-fn">add</span>(<span class="el-fn">mul</span>(w, x), b)
+output.grad = <span class="el-hn">1.0</span></code></pre>
 						</div>
-						<p class="project-stack"><strong>Stack:</strong> OCaml, Dune, LLVM IR, Clang, C runtime</p>
-						<p><a href="https://github.com/goldensam777/elementals" target="_blank" rel="noreferrer">View project</a></p>
+						<p class="project-stack"><strong>Stack:</strong> Language Design, Tensors (arr), Numerical Computing, Autodiff</p>
+						<p><a href="https://github.com/goldensam777/onyx" target="_blank" rel="noreferrer">View project</a></p>
 					</article>
 
 					<article class="card project reveal" data-category="systems">

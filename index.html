@@ -225,13 +225,12 @@
 
 					<article class="card project reveal" data-category="systems">
 						<div class="project-head">
-							<h3>Elementals - Langage scientifique compilé via LLVM</h3>
+							<h3>Onyx - Langage Polyvalent pour la recherche, le calcul numérique et l'IA</h3>
 						</div>
 						<p class="project-summary">
-							Conception d'un langage de programmation dédié au calcul multi-dimensionnel et à la physique.
-							Elementals introduit le support natif des nombres hypercomplexes (quaternions, octonions),
-							une dualité sémantique entre calculs mathématiques purs et processus à effets de bord,
-							et une compilation native ultra-rapide via LLVM IR et Clang.
+							Conception d'un langage de programmation moderne alliant syntaxe compacte, performance et expressivité.
+							Onyx introduit le support natif des tenseurs multidimensionnels (<code>arr</code>), une inférence de types prévisible,
+							la différentiation automatique (autodiff) et un modèle d'exécution adapté à l'IA et au calcul scientifique.
 						</p>
 						<div class="code-editor">
 							<div class="editor-header">
@@ -241,7 +240,7 @@
 										<span class="dot-yellow"></span>
 										<span class="dot-green"></span>
 									</div>
-									<span class="editor-title">quantum_field.el</span>
+									<span class="editor-title">micrograd.onx</span>
 								</div>
 								<button class="copy-btn" type="button" aria-label="Copier le code" onclick="copyCode(this)">
 									<svg class="icon-copy" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
@@ -249,18 +248,25 @@
 									<span>Copier</span>
 								</button>
 							</div>
-							<pre class="editor-body"><code><span class="el-cm">->> Support natif des nombres hypercomplexes &amp; architecture HyperNumber</span>
-<span class="el-kw">element</span> <span class="el-ty">QuantumState</span>:
-    <span class="el-kw">as</span> <span class="el-ty">Field</span>
-    rotation: <span class="el-ty">HyperNumber</span> = <span class="el-hn">0.5</span> + <span class="el-hn">1.2j</span> + <span class="el-hn">3.4k</span>
-    repr = <span class="el-st">'State(|ψ⟩)'</span>
+							<pre class="editor-body"><code><span class="el-cm">(&lt; Graphe computationnel &amp; autodiff : nœud Value et gradients &gt;)</span>
+<span class="el-kw">class</span> <span class="el-ty">Value</span>:
+    <span class="el-dc">#from</span>(* data: <span class="el-ty">real</span>, children: <span class="el-ty">tuple</span> = (), op: <span class="el-ty">string</span> = <span class="el-st">""</span>)
+    .<span class="el-fn">grad</span>: <span class="el-ty">real</span> = <span class="el-hn">0.0</span>
 
-<span class="el-cm">->> Transformation pure mathématique</span>
-compute_phase(q, energy):
-    q.rotation * cos²(energy) + sin²(energy)</code></pre>
+<span class="el-fn">mul</span>(a: <span class="el-ty">Value</span>, b: <span class="el-ty">Value</span>) -&gt; <span class="el-ty">Value</span>:
+    =&gt; <span class="el-ty">Value</span>(a.data * b.data, (a, b), <span class="el-st">"*"</span>)
+
+<span class="el-fn">backward_mul</span>(out: <span class="el-ty">Value</span>, left: <span class="el-ty">Value</span>, right: <span class="el-ty">Value</span>) -&gt; <span class="el-ty">none</span>:
+    left.grad = left.grad + out.grad * right.data
+    right.grad = right.grad + out.grad * left.data
+    =&gt; <span class="el-kw">none</span>
+
+<span class="el-cm">(&lt; y = w * x + b : propagation avant et accumulation &gt;)</span>
+output: <span class="el-ty">Value</span> = <span class="el-fn">add</span>(<span class="el-fn">mul</span>(w, x), b)
+output.grad = <span class="el-hn">1.0</span></code></pre>
 						</div>
-						<p class="project-stack"><strong>Stack:</strong> OCaml, Dune, LLVM IR, Clang, runtime C</p>
-						<p><a href="https://github.com/goldensam777/elementals" target="_blank" rel="noreferrer">Voir le projet</a></p>
+						<p class="project-stack"><strong>Stack:</strong> Conception de langage, Tenseurs (arr), Calcul numérique, Autodiff</p>
+						<p><a href="https://github.com/goldensam777/onyx" target="_blank" rel="noreferrer">Voir le projet</a></p>
 					</article>
 
 					<article class="card project reveal" data-category="systems">
