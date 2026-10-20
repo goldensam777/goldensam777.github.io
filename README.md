@@ -4,7 +4,7 @@ Site web personnel et portfolio statique, hébergé sur GitHub Pages et accessib
 
 ## Présentation
 
-Ce dépôt contient le code source du portfolio de YEVI Mawuli Péniel Samuel, étudiant en systèmes embarqués et IoT à l'IFRI-UAC et chercheur autodidacte en informatique scientifique, programmation systèmes et modèles d'IA locaux.
+Ce dépôt contient le code source du portfolio de YEVI Mawuli Péniel Samuel, chercheur indépendant en informatique scientifique, programmation systèmes et modèles d'IA locaux.
 
 ## Structure du projet
 
